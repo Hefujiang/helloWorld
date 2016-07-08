@@ -8,7 +8,10 @@
 
     <property name="main-class"  value="oata.HelloWorld"/>
 
-
+    <target name="echoBeginInfo">
+        <echo message="build HelloWorld begin......."/>
+		<echo message="------------------------------"/>
+    </target>
 
     <target name="clean">
         <delete dir="${build.dir}"/>
@@ -34,6 +37,6 @@
 
     <target name="clean-build" depends="clean,jar"/>
 
-    <target name="main" depends="clean,run"/>
+    <target name="main" depends="echoBeginInfo,clean,run"/>
 
 </project>
